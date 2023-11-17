@@ -33,5 +33,10 @@
     "app/ocrkeywords",
     "app/assign_role",
     "app/parameters_settings"
-  ]
+  ],
+  "cds": {
+    "requires": {
+      "db":{"kind": "hana"}
+    }
+  }
 }
