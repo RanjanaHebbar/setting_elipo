@@ -1,0 +1,481 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="4.0" xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx">
+    <edmx:Reference Uri="https://sap.github.io/odata-vocabularies/vocabularies/Common.xml">
+        <edmx:Include Alias="Common" Namespace="com.sap.vocabularies.Common.v1"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="https://oasis-tcs.github.io/odata-vocabularies/vocabularies/Org.OData.Core.V1.xml">
+        <edmx:Include Alias="Core" Namespace="Org.OData.Core.V1"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="https://sap.github.io/odata-vocabularies/vocabularies/UI.xml">
+        <edmx:Include Alias="UI" Namespace="com.sap.vocabularies.UI.v1"/>
+    </edmx:Reference>
+    <edmx:DataServices>
+        <Schema Namespace="settingService" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+            <EntityContainer Name="EntityContainer">
+                <EntitySet Name="Table1" EntityType="settingService.Table1">
+                    <NavigationPropertyBinding Path="SiblingEntity" Target="Table1"/>
+                </EntitySet>
+                <EntitySet Name="_search" EntityType="settingService._search"/>
+                <EntitySet Name="_1search" EntityType="settingService._1search"/>
+                <EntitySet Name="_2search" EntityType="settingService._2search"/>
+                <EntitySet Name="_3search" EntityType="settingService._3search"/>
+                <EntitySet Name="_4search" EntityType="settingService._4search"/>
+                <EntitySet Name="_5search" EntityType="settingService._5search"/>
+                <EntitySet Name="_6search" EntityType="settingService._6search"/>
+                <EntitySet Name="_7search" EntityType="settingService._7search"/>
+                <EntitySet Name="_8search" EntityType="settingService._8search"/>
+                <EntitySet Name="Table2" EntityType="settingService.Table2">
+                    <NavigationPropertyBinding Path="relation" Target="Tablechild"/>
+                    <NavigationPropertyBinding Path="SiblingEntity" Target="Table2"/>
+                </EntitySet>
+                <EntitySet Name="Tablechild" EntityType="settingService.Tablechild">
+                    <NavigationPropertyBinding Path="parent" Target="Table2"/>
+                    <NavigationPropertyBinding Path="SiblingEntity" Target="Tablechild"/>
+                </EntitySet>
+                <EntitySet Name="User_role" EntityType="settingService.User_role">
+                    <NavigationPropertyBinding Path="SiblingEntity" Target="User_role"/>
+                </EntitySet>
+                <EntitySet Name="_searchh" EntityType="settingService._searchh"/>
+                <EntitySet Name="_searchh1" EntityType="settingService._searchh1"/>
+                <EntitySet Name="demo" EntityType="settingService.demo">
+                    <NavigationPropertyBinding Path="SiblingEntity" Target="demo"/>
+                </EntitySet>
+            </EntityContainer>
+            <EntityType Name="Table1">
+                <Key>
+                    <PropertyRef Name="IsActiveEntity"/>
+                </Key>
+                <Property Name="do_you_want" Type="Edm.String"/>
+                <Property Name="url_to_post" Type="Edm.String"/>
+                <Property Name="url_to_fetch" Type="Edm.String"/>
+                <Property Name="url_to_fetch_payment" Type="Edm.String"/>
+                <Property Name="login_id" Type="Edm.String"/>
+                <Property Name="login_password" Type="Edm.String"/>
+                <Property Name="enable_integration" Type="Edm.Boolean"/>
+                <Property Name="enable_integration_validation" Type="Edm.Boolean"/>
+                <Property Name="po_validation_against_3way_match" Type="Edm.Boolean"/>
+                <Property Name="send_attachments" Type="Edm.Boolean"/>
+                <Property Name="post_invoice" Type="Edm.String"/>
+                <Property Name="enable_supplier_enquiries" Type="Edm.Boolean"/>
+                <Property Name="enable_assignment_rules" Type="Edm.Boolean"/>
+                <Property Name="enable_version_control" Type="Edm.Boolean"/>
+                <Property Name="enable_approval_rules" Type="Edm.Boolean"/>
+                <Property Name="enable_manual_qc_check" Type="Edm.Boolean"/>
+                <Property Name="set_tolerance_limit" Type="Edm.Boolean"/>
+                <Property Name="auto_schedule_ocr" Type="Edm.Boolean"/>
+                <Property Name="set_the_duration" Type="Edm.Int32"/>
+                <Property Name="set_the_duration1" Type="Edm.String"/>
+                <Property Name="ocr" Type="Edm.String"/>
+                <Property Name="postprocessor" Type="Edm.String"/>
+                <Property Name="process" Type="Edm.String"/>
+                <Property Name="get_payment_status" Type="Edm.Boolean"/>
+                <Property Name="sync_master_data" Type="Edm.Boolean"/>
+                <Property Name="sync_for_material" Type="Edm.Boolean"/>
+                <Property Name="sync_for_vendor" Type="Edm.Boolean"/>
+                <Property Name="sync_duration" Type="Edm.Int32"/>
+                <Property Name="sync_duration1" Type="Edm.String"/>
+                <Property Name="days" Type="Edm.Int32"/>
+                <Property Name="auto_trigger_approval" Type="Edm.Boolean"/>
+                <Property Name="enable_accuracy_parameters" Type="Edm.Boolean"/>
+                <Property Name="country" Type="Edm.String"/>
+                <Property Name="notification_gmail" Type="Edm.String"/>
+                <Property Name="gstn" Type="Edm.String"/>
+                <Property Name="ocr_email" Type="Edm.String"/>
+                <Property Name="logo" Type="Edm.String"/>
+                <Property Name="IsActiveEntity" Type="Edm.Boolean" Nullable="false" DefaultValue="true"/>
+                <Property Name="HasActiveEntity" Type="Edm.Boolean" Nullable="false" DefaultValue="false"/>
+                <Property Name="HasDraftEntity" Type="Edm.Boolean" Nullable="false" DefaultValue="false"/>
+                <NavigationProperty Name="DraftAdministrativeData" Type="settingService.DraftAdministrativeData" ContainsTarget="true"/>
+                <NavigationProperty Name="SiblingEntity" Type="settingService.Table1"/>
+            </EntityType>
+            <EntityType Name="_search">
+                <Property Name="f1" Type="Edm.String"/>
+                <Property Name="f2" Type="Edm.String"/>
+                <Property Name="f3" Type="Edm.String"/>
+            </EntityType>
+            <EntityType Name="_1search">
+                <Property Name="c" Type="Edm.String"/>
+            </EntityType>
+            <EntityType Name="_2search">
+                <Property Name="o" Type="Edm.String"/>
+            </EntityType>
+            <EntityType Name="_3search">
+                <Property Name="p" Type="Edm.String"/>
+            </EntityType>
+            <EntityType Name="_4search">
+                <Property Name="day" Type="Edm.Int32"/>
+            </EntityType>
+            <EntityType Name="_5search">
+                <Property Name="durationn" Type="Edm.Int32"/>
+            </EntityType>
+            <EntityType Name="_6search">
+                <Property Name="durationn1" Type="Edm.String"/>
+            </EntityType>
+            <EntityType Name="_7search">
+                <Property Name="sync_durationn" Type="Edm.Int32"/>
+            </EntityType>
+            <EntityType Name="_8search">
+                <Property Name="sync_durationn1" Type="Edm.String"/>
+            </EntityType>
+            <EntityType Name="Table2">
+                <Key>
+                    <PropertyRef Name="table_key"/>
+                    <PropertyRef Name="IsActiveEntity"/>
+                </Key>
+                <Property Name="table_key" Type="Edm.String" Nullable="false"/>
+                <Property Name="ocr" Type="Edm.String"/>
+                <NavigationProperty Name="relation" Type="Collection(settingService.Tablechild)">
+                    <OnDelete Action="Cascade"/>
+                </NavigationProperty>
+                <Property Name="IsActiveEntity" Type="Edm.Boolean" Nullable="false" DefaultValue="true"/>
+                <Property Name="HasActiveEntity" Type="Edm.Boolean" Nullable="false" DefaultValue="false"/>
+                <Property Name="HasDraftEntity" Type="Edm.Boolean" Nullable="false" DefaultValue="false"/>
+                <NavigationProperty Name="DraftAdministrativeData" Type="settingService.DraftAdministrativeData" ContainsTarget="true"/>
+                <NavigationProperty Name="SiblingEntity" Type="settingService.Table2"/>
+            </EntityType>
+            <EntityType Name="Tablechild">
+                <Key>
+                    <PropertyRef Name="id"/>
+                    <PropertyRef Name="table_key"/>
+                    <PropertyRef Name="IsActiveEntity"/>
+                </Key>
+                <Property Name="id" Type="Edm.Guid" Nullable="false"/>
+                <Property Name="label_id" Type="Edm.Int32"/>
+                <Property Name="label" Type="Edm.String"/>
+                <Property Name="table_key" Type="Edm.String" Nullable="false"/>
+                <NavigationProperty Name="parent" Type="settingService.Table2">
+                    <ReferentialConstraint Property="parent_table_key" ReferencedProperty="table_key"/>
+                </NavigationProperty>
+                <Property Name="parent_table_key" Type="Edm.String"/>
+                <Property Name="IsActiveEntity" Type="Edm.Boolean" Nullable="false" DefaultValue="true"/>
+                <Property Name="HasActiveEntity" Type="Edm.Boolean" Nullable="false" DefaultValue="false"/>
+                <Property Name="HasDraftEntity" Type="Edm.Boolean" Nullable="false" DefaultValue="false"/>
+                <NavigationProperty Name="DraftAdministrativeData" Type="settingService.DraftAdministrativeData" ContainsTarget="true"/>
+                <NavigationProperty Name="SiblingEntity" Type="settingService.Tablechild"/>
+            </EntityType>
+            <EntityType Name="User_role">
+                <Key>
+                    <PropertyRef Name="id"/>
+                    <PropertyRef Name="member_id"/>
+                    <PropertyRef Name="IsActiveEntity"/>
+                </Key>
+                <Property Name="id" Type="Edm.Int32" Nullable="false"/>
+                <Property Name="user_role" Type="Edm.String"/>
+                <Property Name="user_name" Type="Edm.String"/>
+                <Property Name="email_id" Type="Edm.String"/>
+                <Property Name="department_id" Type="Edm.Int32"/>
+                <Property Name="member_id" Type="Edm.Int32" Nullable="false"/>
+                <Property Name="user_type" Type="Edm.String"/>
+                <Property Name="vendor_code" Type="Edm.Int32"/>
+                <Property Name="vendor_name" Type="Edm.String"/>
+                <Property Name="IsActiveEntity" Type="Edm.Boolean" Nullable="false" DefaultValue="true"/>
+                <Property Name="HasActiveEntity" Type="Edm.Boolean" Nullable="false" DefaultValue="false"/>
+                <Property Name="HasDraftEntity" Type="Edm.Boolean" Nullable="false" DefaultValue="false"/>
+                <NavigationProperty Name="DraftAdministrativeData" Type="settingService.DraftAdministrativeData" ContainsTarget="true"/>
+                <NavigationProperty Name="SiblingEntity" Type="settingService.User_role"/>
+            </EntityType>
+            <EntityType Name="_searchh">
+                <Property Name="user_type" Type="Edm.String"/>
+            </EntityType>
+            <EntityType Name="_searchh1">
+                <Property Name="supplier_code" Type="Edm.Int32"/>
+                <Property Name="supplier_description" Type="Edm.String"/>
+            </EntityType>
+            <EntityType Name="demo">
+                <Key>
+                    <PropertyRef Name="IsActiveEntity"/>
+                </Key>
+                <Property Name="do_you_want" Type="Edm.String"/>
+                <Property Name="url_to_post" Type="Edm.String" DefaultValue="http://182.72.219.94:8000/zinvoiceno1/InvoicePost"/>
+                <Property Name="url_to_fetch" Type="Edm.String" DefaultValue="http://182.72.219.94:8000/zgetpo/GetPo"/>
+                <Property Name="url_to_fetch_payment" Type="Edm.String" DefaultValue="http://182.72.219.94:8000/zget_payment/Getpayment"/>
+                <Property Name="login_id" Type="Edm.String" DefaultValue="developer31"/>
+                <Property Name="login_password" Type="Edm.String" DefaultValue="********"/>
+                <Property Name="enable_integration" Type="Edm.Boolean"/>
+                <Property Name="enable_integration_validation" Type="Edm.Boolean"/>
+                <Property Name="po_validation_against_3way_match" Type="Edm.Boolean"/>
+                <Property Name="send_attachments" Type="Edm.Boolean"/>
+                <Property Name="post_invoice" Type="Edm.String"/>
+                <Property Name="enable_supplier_enquiries" Type="Edm.Boolean"/>
+                <Property Name="enable_assignment_rules" Type="Edm.Boolean"/>
+                <Property Name="enable_version_control" Type="Edm.Boolean"/>
+                <Property Name="enable_approval_rules" Type="Edm.Boolean"/>
+                <Property Name="enable_manual_qc_check" Type="Edm.Boolean"/>
+                <Property Name="set_tolerance_limit" Type="Edm.Boolean"/>
+                <Property Name="auto_schedule_ocr" Type="Edm.Boolean"/>
+                <Property Name="set_the_duration" Type="Edm.Int32"/>
+                <Property Name="set_the_duration1" Type="Edm.String"/>
+                <Property Name="ocr" Type="Edm.String"/>
+                <Property Name="process" Type="Edm.String"/>
+                <Property Name="get_payment_status" Type="Edm.Boolean"/>
+                <Property Name="sync_master_data" Type="Edm.Boolean"/>
+                <Property Name="sync_for_material" Type="Edm.Boolean"/>
+                <Property Name="sync_for_vendor" Type="Edm.Boolean"/>
+                <Property Name="sync_duration" Type="Edm.Int32"/>
+                <Property Name="sync_duration1" Type="Edm.String"/>
+                <Property Name="days" Type="Edm.Int32"/>
+                <Property Name="auto_trigger_approval" Type="Edm.Boolean"/>
+                <Property Name="enable_accuracy_parameters" Type="Edm.Boolean"/>
+                <Property Name="country" Type="Edm.String"/>
+                <Property Name="notification_gmail" Type="Edm.String" DefaultValue="elipotest@gmail.com"/>
+                <Property Name="gstn" Type="Edm.String" DefaultValue="29AAHCP5201G1ZJ"/>
+                <Property Name="ocr_email" Type="Edm.String" DefaultValue="einvoiceportal@gmail.com"/>
+                <Property Name="logo" Type="Edm.String"/>
+                <Property Name="postprocessor" Type="Edm.String"/>
+                <Property Name="IsActiveEntity" Type="Edm.Boolean" Nullable="false" DefaultValue="true"/>
+                <Property Name="HasActiveEntity" Type="Edm.Boolean" Nullable="false" DefaultValue="false"/>
+                <Property Name="HasDraftEntity" Type="Edm.Boolean" Nullable="false" DefaultValue="false"/>
+                <NavigationProperty Name="DraftAdministrativeData" Type="settingService.DraftAdministrativeData" ContainsTarget="true"/>
+                <NavigationProperty Name="SiblingEntity" Type="settingService.demo"/>
+            </EntityType>
+            <EntityType Name="DraftAdministrativeData">
+                <Key>
+                    <PropertyRef Name="DraftUUID"/>
+                </Key>
+                <Property Name="DraftUUID" Type="Edm.Guid" Nullable="false"/>
+                <Property Name="CreationDateTime" Type="Edm.DateTimeOffset" Precision="7"/>
+                <Property Name="CreatedByUser" Type="Edm.String" MaxLength="256"/>
+                <Property Name="DraftIsCreatedByMe" Type="Edm.Boolean"/>
+                <Property Name="LastChangeDateTime" Type="Edm.DateTimeOffset" Precision="7"/>
+                <Property Name="LastChangedByUser" Type="Edm.String" MaxLength="256"/>
+                <Property Name="InProcessByUser" Type="Edm.String" MaxLength="256"/>
+                <Property Name="DraftIsProcessedByMe" Type="Edm.Boolean"/>
+            </EntityType>
+            <Action Name="UPDATE" IsBound="true">
+                <Parameter Name="in" Type="settingService.Table1"/>
+            </Action>
+            <Action Name="draftPrepare" IsBound="true" EntitySetPath="in">
+                <Parameter Name="in" Type="settingService.Table1"/>
+                <Parameter Name="SideEffectsQualifier" Type="Edm.String"/>
+                <ReturnType Type="settingService.Table1"/>
+            </Action>
+            <Action Name="draftPrepare" IsBound="true" EntitySetPath="in">
+                <Parameter Name="in" Type="settingService.Table2"/>
+                <Parameter Name="SideEffectsQualifier" Type="Edm.String"/>
+                <ReturnType Type="settingService.Table2"/>
+            </Action>
+            <Action Name="draftPrepare" IsBound="true" EntitySetPath="in">
+                <Parameter Name="in" Type="settingService.Tablechild"/>
+                <Parameter Name="SideEffectsQualifier" Type="Edm.String"/>
+                <ReturnType Type="settingService.Tablechild"/>
+            </Action>
+            <Action Name="draftPrepare" IsBound="true" EntitySetPath="in">
+                <Parameter Name="in" Type="settingService.User_role"/>
+                <Parameter Name="SideEffectsQualifier" Type="Edm.String"/>
+                <ReturnType Type="settingService.User_role"/>
+            </Action>
+            <Action Name="draftPrepare" IsBound="true" EntitySetPath="in">
+                <Parameter Name="in" Type="settingService.demo"/>
+                <Parameter Name="SideEffectsQualifier" Type="Edm.String"/>
+                <ReturnType Type="settingService.demo"/>
+            </Action>
+            <Action Name="draftActivate" IsBound="true" EntitySetPath="in">
+                <Parameter Name="in" Type="settingService.Table1"/>
+                <ReturnType Type="settingService.Table1"/>
+            </Action>
+            <Action Name="draftActivate" IsBound="true" EntitySetPath="in">
+                <Parameter Name="in" Type="settingService.Table2"/>
+                <ReturnType Type="settingService.Table2"/>
+            </Action>
+            <Action Name="draftActivate" IsBound="true" EntitySetPath="in">
+                <Parameter Name="in" Type="settingService.User_role"/>
+                <ReturnType Type="settingService.User_role"/>
+            </Action>
+            <Action Name="draftActivate" IsBound="true" EntitySetPath="in">
+                <Parameter Name="in" Type="settingService.demo"/>
+                <ReturnType Type="settingService.demo"/>
+            </Action>
+            <Action Name="draftEdit" IsBound="true" EntitySetPath="in">
+                <Parameter Name="in" Type="settingService.Table1"/>
+                <Parameter Name="PreserveChanges" Type="Edm.Boolean"/>
+                <ReturnType Type="settingService.Table1"/>
+            </Action>
+            <Action Name="draftEdit" IsBound="true" EntitySetPath="in">
+                <Parameter Name="in" Type="settingService.Table2"/>
+                <Parameter Name="PreserveChanges" Type="Edm.Boolean"/>
+                <ReturnType Type="settingService.Table2"/>
+            </Action>
+            <Action Name="draftEdit" IsBound="true" EntitySetPath="in">
+                <Parameter Name="in" Type="settingService.User_role"/>
+                <Parameter Name="PreserveChanges" Type="Edm.Boolean"/>
+                <ReturnType Type="settingService.User_role"/>
+            </Action>
+            <Action Name="draftEdit" IsBound="true" EntitySetPath="in">
+                <Parameter Name="in" Type="settingService.demo"/>
+                <Parameter Name="PreserveChanges" Type="Edm.Boolean"/>
+                <ReturnType Type="settingService.demo"/>
+            </Action>
+            <Annotations Target="settingService.EntityContainer/Table1">
+                <Annotation Term="Common.DraftRoot">
+                    <Record Type="Common.DraftRootType">
+                        <PropertyValue Property="ActivationAction" String="settingService.draftActivate"/>
+                        <PropertyValue Property="EditAction" String="settingService.draftEdit"/>
+                        <PropertyValue Property="PreparationAction" String="settingService.draftPrepare"/>
+                    </Record>
+                </Annotation>
+            </Annotations>
+            <Annotations Target="settingService.Table1/url_to_post">
+                <Annotation Term="Core.Computed" Bool="true"/>
+            </Annotations>
+            <Annotations Target="settingService.Table1/url_to_fetch">
+                <Annotation Term="Core.Computed" Bool="true"/>
+            </Annotations>
+            <Annotations Target="settingService.Table1/url_to_fetch_payment">
+                <Annotation Term="Core.Computed" Bool="true"/>
+            </Annotations>
+            <Annotations Target="settingService.Table1/login_id">
+                <Annotation Term="Core.Computed" Bool="true"/>
+            </Annotations>
+            <Annotations Target="settingService.Table1/login_password">
+                <Annotation Term="Common.MaskedValue" String="true"/>
+                <Annotation Term="Core.Computed" Bool="true"/>
+            </Annotations>
+            <Annotations Target="settingService.Table1/IsActiveEntity">
+                <Annotation Term="UI.Hidden" Bool="true"/>
+            </Annotations>
+            <Annotations Target="settingService.Table1/HasActiveEntity">
+                <Annotation Term="UI.Hidden" Bool="true"/>
+            </Annotations>
+            <Annotations Target="settingService.Table1/HasDraftEntity">
+                <Annotation Term="UI.Hidden" Bool="true"/>
+            </Annotations>
+            <Annotations Target="settingService.Table1/DraftAdministrativeData">
+                <Annotation Term="UI.Hidden" Bool="true"/>
+            </Annotations>
+            <Annotations Target="settingService.EntityContainer/Table2">
+                <Annotation Term="Common.DraftRoot">
+                    <Record Type="Common.DraftRootType">
+                        <PropertyValue Property="ActivationAction" String="settingService.draftActivate"/>
+                        <PropertyValue Property="EditAction" String="settingService.draftEdit"/>
+                        <PropertyValue Property="PreparationAction" String="settingService.draftPrepare"/>
+                    </Record>
+                </Annotation>
+            </Annotations>
+            <Annotations Target="settingService.Table2/IsActiveEntity">
+                <Annotation Term="UI.Hidden" Bool="true"/>
+            </Annotations>
+            <Annotations Target="settingService.Table2/HasActiveEntity">
+                <Annotation Term="UI.Hidden" Bool="true"/>
+            </Annotations>
+            <Annotations Target="settingService.Table2/HasDraftEntity">
+                <Annotation Term="UI.Hidden" Bool="true"/>
+            </Annotations>
+            <Annotations Target="settingService.Table2/DraftAdministrativeData">
+                <Annotation Term="UI.Hidden" Bool="true"/>
+            </Annotations>
+            <Annotations Target="settingService.EntityContainer/Tablechild">
+                <Annotation Term="Common.DraftNode">
+                    <Record Type="Common.DraftNodeType">
+                        <PropertyValue Property="PreparationAction" String="settingService.draftPrepare"/>
+                    </Record>
+                </Annotation>
+            </Annotations>
+            <Annotations Target="settingService.Tablechild/IsActiveEntity">
+                <Annotation Term="UI.Hidden" Bool="true"/>
+            </Annotations>
+            <Annotations Target="settingService.Tablechild/HasActiveEntity">
+                <Annotation Term="UI.Hidden" Bool="true"/>
+            </Annotations>
+            <Annotations Target="settingService.Tablechild/HasDraftEntity">
+                <Annotation Term="UI.Hidden" Bool="true"/>
+            </Annotations>
+            <Annotations Target="settingService.Tablechild/DraftAdministrativeData">
+                <Annotation Term="UI.Hidden" Bool="true"/>
+            </Annotations>
+            <Annotations Target="settingService.EntityContainer/User_role">
+                <Annotation Term="Common.DraftRoot">
+                    <Record Type="Common.DraftRootType">
+                        <PropertyValue Property="ActivationAction" String="settingService.draftActivate"/>
+                        <PropertyValue Property="EditAction" String="settingService.draftEdit"/>
+                        <PropertyValue Property="PreparationAction" String="settingService.draftPrepare"/>
+                    </Record>
+                </Annotation>
+            </Annotations>
+            <Annotations Target="settingService.User_role/user_name">
+                <Annotation Term="Core.Computed" Bool="true"/>
+            </Annotations>
+            <Annotations Target="settingService.User_role/email_id">
+                <Annotation Term="Core.Computed" Bool="true"/>
+            </Annotations>
+            <Annotations Target="settingService.User_role/IsActiveEntity">
+                <Annotation Term="UI.Hidden" Bool="true"/>
+            </Annotations>
+            <Annotations Target="settingService.User_role/HasActiveEntity">
+                <Annotation Term="UI.Hidden" Bool="true"/>
+            </Annotations>
+            <Annotations Target="settingService.User_role/HasDraftEntity">
+                <Annotation Term="UI.Hidden" Bool="true"/>
+            </Annotations>
+            <Annotations Target="settingService.User_role/DraftAdministrativeData">
+                <Annotation Term="UI.Hidden" Bool="true"/>
+            </Annotations>
+            <Annotations Target="settingService.EntityContainer/demo">
+                <Annotation Term="Common.DraftRoot">
+                    <Record Type="Common.DraftRootType">
+                        <PropertyValue Property="ActivationAction" String="settingService.draftActivate"/>
+                        <PropertyValue Property="EditAction" String="settingService.draftEdit"/>
+                        <PropertyValue Property="PreparationAction" String="settingService.draftPrepare"/>
+                    </Record>
+                </Annotation>
+            </Annotations>
+            <Annotations Target="settingService.demo/url_to_post">
+                <Annotation Term="Core.Computed" Bool="true"/>
+            </Annotations>
+            <Annotations Target="settingService.demo/url_to_fetch">
+                <Annotation Term="Core.Computed" Bool="true"/>
+            </Annotations>
+            <Annotations Target="settingService.demo/url_to_fetch_payment">
+                <Annotation Term="Core.Computed" Bool="true"/>
+            </Annotations>
+            <Annotations Target="settingService.demo/login_id">
+                <Annotation Term="Core.Computed" Bool="true"/>
+            </Annotations>
+            <Annotations Target="settingService.demo/login_password">
+                <Annotation Term="Common.MaskedValue" String="true"/>
+                <Annotation Term="Core.Computed" Bool="true"/>
+            </Annotations>
+            <Annotations Target="settingService.demo/IsActiveEntity">
+                <Annotation Term="UI.Hidden" Bool="true"/>
+            </Annotations>
+            <Annotations Target="settingService.demo/HasActiveEntity">
+                <Annotation Term="UI.Hidden" Bool="true"/>
+            </Annotations>
+            <Annotations Target="settingService.demo/HasDraftEntity">
+                <Annotation Term="UI.Hidden" Bool="true"/>
+            </Annotations>
+            <Annotations Target="settingService.demo/DraftAdministrativeData">
+                <Annotation Term="UI.Hidden" Bool="true"/>
+            </Annotations>
+            <Annotations Target="settingService.DraftAdministrativeData">
+                <Annotation Term="Common.Label" String="{i18n>Draft_DraftAdministrativeData}"/>
+                </Annotations>
+                <Annotations Target="settingService.DraftAdministrativeData/DraftUUID">
+                    <Annotation Term="UI.Hidden" Bool="true"/>
+                    <Annotation Term="Common.Label" String="{i18n>Draft_DraftUUID}"/>
+                    </Annotations>
+                    <Annotations Target="settingService.DraftAdministrativeData/CreationDateTime">
+                        <Annotation Term="Common.Label" String="{i18n>Draft_CreationDateTime}"/>
+                        </Annotations>
+                        <Annotations Target="settingService.DraftAdministrativeData/CreatedByUser">
+                            <Annotation Term="Common.Label" String="{i18n>Draft_CreatedByUser}"/>
+                            </Annotations>
+                            <Annotations Target="settingService.DraftAdministrativeData/DraftIsCreatedByMe">
+                                <Annotation Term="UI.Hidden" Bool="true"/>
+                                <Annotation Term="Common.Label" String="{i18n>Draft_DraftIsCreatedByMe}"/>
+                                </Annotations>
+                                <Annotations Target="settingService.DraftAdministrativeData/LastChangeDateTime">
+                                    <Annotation Term="Common.Label" String="{i18n>Draft_LastChangeDateTime}"/>
+                                    </Annotations>
+                                    <Annotations Target="settingService.DraftAdministrativeData/LastChangedByUser">
+                                        <Annotation Term="Common.Label" String="{i18n>Draft_LastChangedByUser}"/>
+                                        </Annotations>
+                                        <Annotations Target="settingService.DraftAdministrativeData/InProcessByUser">
+                                            <Annotation Term="Common.Label" String="{i18n>Draft_InProcessByUser}"/>
+                                            </Annotations>
+                                            <Annotations Target="settingService.DraftAdministrativeData/DraftIsProcessedByMe">
+                                                <Annotation Term="UI.Hidden" Bool="true"/>
+                                                <Annotation Term="Common.Label" String="{i18n>Draft_DraftIsProcessedByMe}"/>
+                                                </Annotations>
+                                            </Schema>
+                                        </edmx:DataServices>
+                                    </edmx:Edmx>
